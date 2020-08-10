@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Admins Fight</title>
+    <link rel="stylesheet" href="read.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="read.js"></script>
+    <script src="navbar.js"></script>
+    
+</head>
+<body>
+    <header onmouseover="show()", onmouseout="hide(this)">
+        <b class="headtext"><i> Admins Fight </i></b>
+        <div id="navbar">
+            <div class="navblock">
+                <p style="font-size: Large;" title="Join the official Prototech discord"><a href="index.html" style="text-decoration: none; color: black;">Back to start</a></p>
+            </div>
+            <div class="navblock">
+                <p style="font-size: Large;" title="Read Member wars for free"><a href="read.html" style="text-decoration: none; color: black;">Read</a></p>
+            </div>
+            <div class="navblock">
+                <p style="font-size: Large;" title="Join the official Prototech discord"><a href="https://discord.gg/GttvgQ3" style="text-decoration: none; color: black;">Discord</a></p>
+            </div>
+        </div>
+    </header>
+    <div class="page-nav">
+        <img src="icons/previous.svg" alt="previous" class="pagebuttons" onclick="prev()"> 
+        <select class="page-dropdown" name="Episode selector" id="episodeSelector" onchange="episode(this)">
+            <option value="1">Episode 1</option>
+            <option value="2">Episode 2</option>
+            <option value="3">Episode 3</option>
+            <option value="4">Episode 4</option>
+        </select>
+        <a class="pageinputtext">Page Number:</a>
+        <input type="text" class="pageinput" id="input" oninput="page(this)">
+        <img src="icons/next.svg" alt="next" class="pagebuttons" onclick="next()">
+    </div>
+        
+    <div>
+        <img src="episodes/1/1.png" alt="Failed to load page" id="page" title="Page 1">
+        <img id="comment" class="comment"></img>
+    </div>
+    
+    
+    <script>
+        document.getElementById("input").value = 1;
+        document.getElementById("comment").src = "episodes/"+epNum+"/"+pageNum+"c.png";
+        document.getElementById("comment").style.width = screen.availWidth+"px";
+    </script>
+</body>
+</html>
