@@ -2,6 +2,13 @@
 var epNum = 1;
 var pageNum = 1;
 
+var mouseX;
+var mouseY;
+
+addEventListener("mousemove",function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+})
 
 function episode(selector) {
     epNum = selector.options.selectedIndex + 1;
@@ -36,4 +43,12 @@ function page(input){
     document.getElementById("page").title = "Page " + pageNum;
     document.getElementById("comment").src = "episodes/"+epNum+"/"+pageNum+"c.png";
     console.log("Switched to page " + pageNum);
+}
+
+function clickpage() {
+    if (mouseX<window.innerWidth/2) {
+        prev();
+    } else {
+        next();
+    }
 }

@@ -26,7 +26,10 @@
             </div>
         </div>
     </header>
-    <div class="page-nav">
+    <div class="page-stuff">
+        <div>
+
+        </div>
         <img src="icons/previous.svg" alt="previous" class="pagebuttons" onclick="prev()"> 
         <select class="page-dropdown" name="Episode selector" id="episodeSelector" onchange="episode(this)">
             <option value="1">Episode 1</option>
@@ -37,18 +40,20 @@
         <a class="pageinputtext">Page Number:</a>
         <input type="text" class="pageinput" id="input" oninput="page(this)">
         <img src="icons/next.svg" alt="next" class="pagebuttons" onclick="next()">
-    </div>
+        <br>
+        <span>
+            <img src="episodes/1/1.png" alt="Failed to load page" id="page" title="Page 1" onclick="clickpage()" class="page">
+        </span>      
+        <div class="containcomment">
+            <img id="comment" class="comment"></img>
+        </div>  
         
-    <div>
-        <img src="episodes/1/1.png" alt="Failed to load page" id="page" title="Page 1">
-        <img id="comment" class="comment"></img>
     </div>
     
     
     <script>
         document.getElementById("input").value = 1;
         document.getElementById("comment").src = "episodes/"+epNum+"/"+pageNum+"c.png";
-        document.getElementById("comment").style.width = screen.availWidth+"px";
     </script>
 </body>
 </html>

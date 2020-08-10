@@ -48,10 +48,11 @@ body{
     margin-right: 10px;
     font-size: 30px;
 }
-.page-nav{
+.page-stuff{
     display: block;
     height: 50px;
     margin: 10px;
+    margin-bottom: 0px;
 }
 
 .pagebuttons{
@@ -78,6 +79,11 @@ body{
 }
 
 .comment{
-    object-fit: contain;
-    margin-top: 0px;
+    width: 45%;
+    height: auto;
+    
+}
+.page{
+    width: 45%;
+    height: auto;
 }
